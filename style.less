@@ -1,0 +1,41 @@
+input {
+	font-size: 1em;
+
+	&[readonly] {
+		font-size: 2em;
+	}
+}
+
+button {
+	display: block;
+	font-size: 1em;
+}
+
+form {
+	padding: 1em;
+	background-color: #CCC;
+}
+
+section {
+
+	&.setup {
+		display: none;
+
+		.setup & {
+			display: initial;
+		}
+	}
+	
+	&.server {
+		display: none;
+
+		.server & {
+			display: initial;
+		}
+	}
+}
+
+#qrcode-container {
+	margin: 2em;
+}
+

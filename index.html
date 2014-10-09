@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>Lag Band!</title>
+	<link rel="stylesheet/less" type="text/css" href="style.less"/>
+
+	<script src="http://cdn.peerjs.com/0.3/peer.js"></script>
+	<script src="app.js"></script>
+	<script src="qrcode.min.js"></script>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.5/less.min.js"></script>
+</head>
+<body>
+	<section class="setup">
+		<header>Welcome to Lag Band!</header>
+		What's your role in all of this?
+		<button id="server-button">Speakers</button>
+		<button>Rototheremin</button>
+		<button disabled>Drums</button>
+	</section>
+	<section class="server">
+		Jam with other people by scanning this code
+		<div id="qrcode-container"></div>
+
+		<label>
+			or just type this thing
+			<br/>
+			<input readonly id="id-display"/>
+		</label>
+	</section>
+	<section class="client">
+		<form id="connect-form">
+			<button type="button" id="scan-code-button">Scan a code</button>
+			<label>To connect to some speakers, stick that code in here</label>
+			</br>
+			<input required name="peer-id"/>
+			<button name="connect-button">Connect</button>
+		</form>
+	</section>
+</body>
+</html>
